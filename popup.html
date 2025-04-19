@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Smart Notes</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="lib/quill.snow.css" rel="stylesheet">
+    <script src="lib/quill.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="logo-title">
+                <button id="toggleSidebar" class="btn icon-btn" title="Toggle Notes List">
+                    <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M3 6h18M3 12h18M3 18h18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                    </svg>
+                </button>
+                <h1>Smart Notes</h1>
+            </div>
+            <button id="newNote" class="btn primary">
+                <svg width="16" height="16" fill="currentColor" class="btn-icon">
+                    <path d="M8 0a1 1 0 0 1 1 1v6h6a1 1 0 1 1 0 2H9v6a1 1 0 1 1-2 0V9H1a1 1 0 0 1 0-2h6V1a1 1 0 0 1 1-1z"/>
+                </svg>
+                New Note
+            </button>
+        </div>
+
+        <div class="main-content">
+            <div id="sidebar" class="sidebar">
+                <div class="sidebar-header">
+                    <h2>My Notes</h2>
+                    <span id="noteCount" class="note-count">0 notes</span>
+                </div>
+                <div id="notesList" class="notes-list">
+                    <!-- Notes will be dynamically added here -->
+                </div>
+            </div>
+
+            <div class="note-editor" id="noteEditor">
+                <div class="editor-header">
+                    <input type="text" id="noteTitle" placeholder="Note Title" class="note-title">
+                </div>
+                
+                <div id="editor-container">
+                    <div id="noteContent"></div>
+                </div>
+                
+                <div class="button-group">
+                    <button id="saveNote" class="btn primary">
+                        <svg width="16" height="16" fill="currentColor" class="btn-icon">
+                            <path d="M13 3v10.5c0 .83-.67 1.5-1.5 1.5h-9c-.83 0-1.5-.67-1.5-1.5v-9c0-.83.67-1.5 1.5-1.5H12"/>
+                            <path d="M3 7h8M3 10h8M3 13h6"/>
+                        </svg>
+                        Save
+                    </button>
+                    <button id="shareNote" class="btn">
+                        <svg width="16" height="16" fill="currentColor" class="btn-icon">
+                            <path d="M4 12v1a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2h-1"/>
+                            <path d="M7 7L3 3m0 0L7 1M3 3h8a2 2 0 0 1 2 2v2"/>
+                        </svg>
+                        Share
+                    </button>
+                    <button id="downloadNote" class="btn">
+                        <svg width="16" height="16" fill="currentColor" class="btn-icon">
+                            <path d="M8 1v10M4 7l4 4 4-4M3 15h10"/>
+                        </svg>
+                        Download
+                    </button>
+                    <button id="deleteNote" class="btn danger">
+                        <svg width="16" height="16" fill="currentColor" class="btn-icon">
+                            <path d="M2 4h12M4 4v10c0 .55.45 1 1 1h6c.55 0 1-.45 1-1V4M6 4V3c0-.55.45-1 1-1h2c.55 0 1 .45 1 1v1"/>
+                        </svg>
+                        Delete
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="popup.js"></script>
+</body>
+</html> 

@@ -1,0 +1,11 @@
+{
+  "name": "smart-notes-extension",
+  "version": "1.0.0",
+  "description": "A Chrome extension for taking notes",
+  "scripts": {
+    "convert-icons": "node convert_icons.js"
+  },
+  "dependencies": {
+    "sharp": "^0.32.1"
+  }
+} 
